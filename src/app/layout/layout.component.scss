@@ -1,0 +1,29 @@
+@use "../../assets/styles/mixins" as *;
+
+$sidenav-width: 220px;
+
+:root {
+  @include flex(column);
+}
+
+.container {
+  height: auto;
+  flex: 1 1 auto;
+}
+
+.sidenav-container {
+  height: 100%;
+
+  ::ng-deep .mat-sidenav {
+    width: $sidenav-width;
+  }
+
+  ::ng-deep .mat-sidenav-content {
+    margin-left: $sidenav-width;
+  }
+}
+
+.content {
+  height: 100%;
+  overflow: auto;
+}

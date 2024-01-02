@@ -1,0 +1,16 @@
+.product {
+  width: 240px;
+
+  img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: contain;
+  }
+
+  .product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
