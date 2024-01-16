@@ -1,5 +1,12 @@
 <header>
   <mat-toolbar color="secondary">
+    <button
+      mat-icon-button
+      aria-label="menu icon"
+      (click)="sideNavToggle.emit()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
     <span>My Store</span>
     <span class="spacer"></span>
     <button mat-icon-button>

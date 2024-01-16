@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -13,5 +13,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
+  sideNavOpen = signal(false);
 
+  onSideNavToggle() {
+    this.sideNavOpen.update(opened => !opened);
+  }
 }

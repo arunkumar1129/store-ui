@@ -2,4 +2,9 @@
   ::ng-deep .mdc-list-item .mdc-list-item__start {
     margin-right: 1rem;
   }
+  .active {
+    ::ng-deep .mdc-list-item {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
 }

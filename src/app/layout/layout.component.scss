@@ -1,4 +1,4 @@
-@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles" as *;
 
 $sidenav-width: 220px;
 
@@ -18,7 +18,7 @@ $sidenav-width: 220px;
     width: $sidenav-width;
   }
 
-  ::ng-deep .mat-sidenav-content {
+  ::ng-deep .mat-sidenav.mat-drawer-opened .mat-sidenav-content {
     margin-left: $sidenav-width;
   }
 }
@@ -26,4 +26,5 @@ $sidenav-width: 220px;
 .content {
   height: 100%;
   overflow: auto;
+  padding: $spacing-small $spacing-medium;
 }

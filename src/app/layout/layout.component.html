@@ -1,7 +1,7 @@
-<app-header></app-header>
+<app-header (sideNavToggle)="onSideNavToggle()"></app-header>
 <div class="container">
   <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav mode="side" opened>
+    <mat-sidenav mode="over" [opened]="sideNavOpen()">
       <app-sidenav></app-sidenav>
     </mat-sidenav>
     <mat-sidenav-content>

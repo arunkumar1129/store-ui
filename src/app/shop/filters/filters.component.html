@@ -1,1 +1,55 @@
-<p>filters works!</p>
+<mat-card class="filters-container">
+  <h3>Filters</h3>
+  <mat-divider></mat-divider>
+  <section>
+    <h4>Category</h4>
+    <mat-chip-listbox aria-label="Category selection">
+      <mat-chip-option selected value="all">All</mat-chip-option>
+      <mat-chip-option value="electronics">Electronics</mat-chip-option>
+      <mat-chip-option value="clothing">Clothing</mat-chip-option>
+      <mat-chip-option value="books">Books</mat-chip-option>
+    </mat-chip-listbox>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <h4>Price</h4>
+    <strong>
+      {{ startPrice.value | currency : "INR" }} -
+      {{ endPrice.value | currency : "INR" }}
+    </strong>
+    <mat-slider
+      aria-label="Price range"
+      class="price-slider"
+      min="0"
+      max="10000"
+      step="100"
+      thumbLabel
+      tickInterval="100"
+      value="0"
+    >
+      <input value="0" matSliderStartThumb #startPrice />
+      <input value="5000" matSliderEndThumb #endPrice />
+    </mat-slider>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <h4>Rating</h4>
+    <mat-chip-listbox aria-label="Rating selection">
+      <mat-chip-option selected value="all">All</mat-chip-option>
+      <mat-chip-option value="4">4 & more</mat-chip-option>
+      <mat-chip-option value="3">3 & more</mat-chip-option>
+      <mat-chip-option value="2">2 & more</mat-chip-option>
+    </mat-chip-listbox>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <h4>Brands</h4>
+    <div class="checkbox-options">
+      <mat-checkbox>Apple</mat-checkbox>
+      <mat-checkbox>Samsung</mat-checkbox>
+      <mat-checkbox>OnePlus</mat-checkbox>
+      <mat-checkbox>Google</mat-checkbox>
+      <mat-checkbox>LG</mat-checkbox>
+    </div>
+  </section>
+</mat-card>
